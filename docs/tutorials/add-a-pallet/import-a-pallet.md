@@ -55,8 +55,8 @@ that is tagged with `monthly-YYYY-MM`. `YYYY` and `MM` are the corresponding yea
 We also must [look upstream](https://github.com/paritytech/substrate/tags) for the correct version
 to use that is part of this tag. Without the correct tag and version, you will run into issues!
 
-> Be sure to use the _same git tag and version_ for **all** of your substrate dependancies for
-> consitant and reliable behavior! You likely will run into duplicate dependanciy issues and 
+> Be sure to use the _same git tag and version_ for **all** of your substrate dependencies for
+> consistent and reliable behavior! You likely will run into duplicate dependency issues and 
 > worse errors if you do not. 
 
 ### Crate Features
@@ -93,9 +93,9 @@ snippet above should be read as:
 > runtime, `codec`, `frame-executive`, `frame-support`, and all the other listed
 > dependencies should use their `std` feature.
 
-This is important to enable the Substrate runtime to compile to both native binary, which supports
-Rust [`std`](https://doc.rust-lang.org/std/), and [Wasm](https://webassembly.org/) binary, which
-do not (see: [`no_std`](https://rust-embedded.github.io/book/intro/no-std.html)).
+This is necessary to enable the Substrate runtime to compile to both native binary, which supports
+Rust [`std`](https://doc.rust-lang.org/std/), and to [Wasm](https://webassembly.org/) binary, which
+does not (see: [`no_std`](https://rust-embedded.github.io/book/intro/no-std.html)).
 
 The use of Wasm runtime binaries is one of Substrate's defining features. It allows the runtime code
 to become a part of a blockchain's evolving state; it also means that the definition of the runtime
